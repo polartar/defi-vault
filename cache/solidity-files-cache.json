@@ -1,0 +1,2585 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\AssetHelpers.sol": {
+      "lastModificationDate": 1642445199702,
+      "contentHash": "6e9691ff1e70d6c40c068018af700e94",
+      "sourceName": "contracts/AssetHelpers.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/misc/IWETH.sol",
+        "./interfaces/IAsset.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "AssetHelpers"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\IERC20.sol": {
+      "lastModificationDate": 1642445199677,
+      "contentHash": "227d410099f794483090324d1492bc09",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\misc\\IWETH.sol": {
+      "lastModificationDate": 1642445199673,
+      "contentHash": "51a474088f8ad7daccef6f57904a5988",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/misc/IWETH.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IAsset.sol": {
+      "lastModificationDate": 1642445199709,
+      "contentHash": "8571bd894a72974d092d8bb0d510213d",
+      "sourceName": "contracts/interfaces/IAsset.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IAsset"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\AssetTransfersHandler.sol": {
+      "lastModificationDate": 1642445199703,
+      "contentHash": "b2c7302237a30f20df0428e6260e9b0a",
+      "sourceName": "contracts/AssetTransfersHandler.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/Address.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/misc/IWETH.sol",
+        "./interfaces/IAsset.sol",
+        "./interfaces/IVault.sol",
+        "./AssetHelpers.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "AssetTransfersHandler"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\math\\Math.sol": {
+      "lastModificationDate": 1642445199673,
+      "contentHash": "22b6c008b253993321be7c78b8f68069",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\BalancerErrors.sol": {
+      "lastModificationDate": 1642445199667,
+      "contentHash": "d66d63e5d308733036ef14283e16f4c5",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Errors"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\SafeERC20.sol": {
+      "lastModificationDate": 1642445199679,
+      "contentHash": "0dd01dfe51c18c72fdff0714c4fd8ceb",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol",
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\Address.sol": {
+      "lastModificationDate": 1642445199674,
+      "contentHash": "0e48b1c7caa29456bee895aa9d072e09",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/Address.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IVault.sol": {
+      "lastModificationDate": 1642445199712,
+      "contentHash": "3fc5808e9f8522542a7e2803b01ebf4e",
+      "sourceName": "contracts/interfaces/IVault.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/ISignaturesValidator.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/ITemporarilyPausable.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/misc/IWETH.sol",
+        "./IAsset.sol",
+        "./IAuthorizer.sol",
+        "./IFlashLoanRecipient.sol",
+        "./IProtocolFeesCollector.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IVault"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\ISignaturesValidator.sol": {
+      "lastModificationDate": 1642445199670,
+      "contentHash": "002c3583802f967e1e243a26f27935c8",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/ISignaturesValidator.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ISignaturesValidator"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\ITemporarilyPausable.sol": {
+      "lastModificationDate": 1642445199670,
+      "contentHash": "83e8d029f44d2989a7d5575fc6784826",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/ITemporarilyPausable.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ITemporarilyPausable"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IAuthorizer.sol": {
+      "lastModificationDate": 1642445199709,
+      "contentHash": "2135974a65cc60746c01cfc589794f9f",
+      "sourceName": "contracts/interfaces/IAuthorizer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IAuthorizer"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IFlashLoanRecipient.sol": {
+      "lastModificationDate": 1642445199709,
+      "contentHash": "4971a6498711048f70357df8d27956d3",
+      "sourceName": "contracts/interfaces/IFlashLoanRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IFlashLoanRecipient"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IProtocolFeesCollector.sol": {
+      "lastModificationDate": 1642445199711,
+      "contentHash": "6759ec3c5d3bf159fda549ee120c4c79",
+      "sourceName": "contracts/interfaces/IProtocolFeesCollector.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "./IVault.sol",
+        "./IAuthorizer.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IProtocolFeesCollector"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\test\\MockAssetTransfersHandler.sol": {
+      "lastModificationDate": 1642445199713,
+      "contentHash": "45361b960acd347516f84e34d69af1ff",
+      "sourceName": "contracts/test/MockAssetTransfersHandler.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "../AssetTransfersHandler.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "MockAssetTransfersHandler"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\math\\FixedPoint.sol": {
+      "lastModificationDate": 1642445199672,
+      "contentHash": "3a55c7ebf88bce8af5f838a442aedc71",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./LogExpMath.sol",
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "FixedPoint"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\math\\LogExpMath.sol": {
+      "lastModificationDate": 1642445199673,
+      "contentHash": "440c7b6035b718ec3b40330efcc1789b",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/math/LogExpMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "LogExpMath"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\test\\MockFlashLoanRecipient.sol": {
+      "lastModificationDate": 1642445199713,
+      "contentHash": "2c21b3881439b84993a94f3845b4dfa0",
+      "sourceName": "contracts/test/MockFlashLoanRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "@balancer-labs/v2-standalone-utils/contracts/test/TestToken.sol",
+        "../interfaces/IFlashLoanRecipient.sol",
+        "../interfaces/IVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "MockFlashLoanRecipient"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\standalone-utils\\contracts\\test\\TestToken.sol": {
+      "lastModificationDate": 1642445199697,
+      "contentHash": "4b8f6464fd375835ed4017d48ce3cc37",
+      "sourceName": "@balancer-labs/v2-standalone-utils/contracts/test/TestToken.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Burnable.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Permit.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/AccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "TestToken"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\ERC20.sol": {
+      "lastModificationDate": 1642445199675,
+      "contentHash": "c3264e84bb80b3d7c8539e5a845a31fc",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol",
+        "./IERC20.sol",
+        "./SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\ERC20Burnable.sol": {
+      "lastModificationDate": 1642445199675,
+      "contentHash": "e1f375a9fd0668548ce65621736986ff",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Burnable.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ERC20Burnable"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\ERC20Permit.sol": {
+      "lastModificationDate": 1642445199676,
+      "contentHash": "fa7e5f54074131889bba7968376139a2",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol",
+        "./IERC20Permit.sol",
+        "./EIP712.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ERC20Permit"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\AccessControl.sol": {
+      "lastModificationDate": 1642445199674,
+      "contentHash": "3fafd249e5dd85fcf29a44b5ea7fa492",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol",
+        "./EnumerableSet.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\SafeMath.sol": {
+      "lastModificationDate": 1642445199680,
+      "contentHash": "82a87a3a78fe68a15646cdd782349013",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\IERC20Permit.sol": {
+      "lastModificationDate": 1642445199677,
+      "contentHash": "39ad845c9adeb3e04e172ffe975a7ea8",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\EIP712.sol": {
+      "lastModificationDate": 1642445199675,
+      "contentHash": "3f72f246d20ae70c8162f0d42647963a",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EIP712.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "EIP712"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\EnumerableSet.sol": {
+      "lastModificationDate": 1642445199676,
+      "contentHash": "5b817a00a019e4662cebd238a0a5658a",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\test\\MockPool.sol": {
+      "lastModificationDate": 1642445199714,
+      "contentHash": "21dee4a188c66ebc94d786acd03319d3",
+      "sourceName": "contracts/test/MockPool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "../interfaces/IVault.sol",
+        "../interfaces/IGeneralPool.sol",
+        "../interfaces/IMinimalSwapInfoPool.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "MockPool"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IGeneralPool.sol": {
+      "lastModificationDate": 1642445199710,
+      "contentHash": "e1d289b160302cce2c3282b4122912f5",
+      "sourceName": "contracts/interfaces/IGeneralPool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IBasePool.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IGeneralPool"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IMinimalSwapInfoPool.sol": {
+      "lastModificationDate": 1642445199710,
+      "contentHash": "a23fccea796b26f00ddc81ae586fbc52",
+      "sourceName": "contracts/interfaces/IMinimalSwapInfoPool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IBasePool.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IMinimalSwapInfoPool"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IBasePool.sol": {
+      "lastModificationDate": 1642445199709,
+      "contentHash": "017fa50b02073c4f01368032aeeb2119",
+      "sourceName": "contracts/interfaces/IBasePool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IVault.sol",
+        "./IPoolSwapStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IBasePool"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\interfaces\\IPoolSwapStructs.sol": {
+      "lastModificationDate": 1642445199711,
+      "contentHash": "5010973bfdbe8c7df9f80104c5049e05",
+      "sourceName": "contracts/interfaces/IPoolSwapStructs.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "./IVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IPoolSwapStructs"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\Swaps.sol": {
+      "lastModificationDate": 1642445199706,
+      "contentHash": "84d997b0932a3f4c1a1cb974b1e7fda3",
+      "sourceName": "contracts/Swaps.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EnumerableMap.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EnumerableSet.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "./PoolBalances.sol",
+        "./interfaces/IPoolSwapStructs.sol",
+        "./interfaces/IGeneralPool.sol",
+        "./interfaces/IMinimalSwapInfoPool.sol",
+        "./balances/BalanceAllocation.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Swaps"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\InputHelpers.sol": {
+      "lastModificationDate": 1642445199671,
+      "contentHash": "6c43de5bbe0e6b8ba77907e54eba6ccf",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../openzeppelin/IERC20.sol",
+        "./BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "InputHelpers"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\EnumerableMap.sol": {
+      "lastModificationDate": 1642445199676,
+      "contentHash": "5d3da8b4dcbcf40a5a32c350b1dcf5ac",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EnumerableMap.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "EnumerableMap"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\ReentrancyGuard.sol": {
+      "lastModificationDate": 1642445199679,
+      "contentHash": "2862bc5c9b7af120c600f598682307b7",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\openzeppelin\\SafeCast.sol": {
+      "lastModificationDate": 1642445199679,
+      "contentHash": "4a820d1981f326ae8b722220514c3f26",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/BalancerErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\PoolBalances.sol": {
+      "lastModificationDate": 1642445199705,
+      "contentHash": "6eea433b5010249b76ad249fc66d83f1",
+      "sourceName": "contracts/PoolBalances.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "./Fees.sol",
+        "./PoolTokens.sol",
+        "./UserBalance.sol",
+        "./interfaces/IBasePool.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "PoolBalances"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\balances\\BalanceAllocation.sol": {
+      "lastModificationDate": 1642445199707,
+      "contentHash": "b2a7220d918b185ef6e3ad3238551a2d",
+      "sourceName": "contracts/balances/BalanceAllocation.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "BalanceAllocation"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\Fees.sol": {
+      "lastModificationDate": 1642445199704,
+      "contentHash": "5eb2b32b3f6c66fa46dbc324c37fa665",
+      "sourceName": "contracts/Fees.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/FixedPoint.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "./ProtocolFeesCollector.sol",
+        "./VaultAuthorization.sol",
+        "./interfaces/IVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Fees"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\PoolTokens.sol": {
+      "lastModificationDate": 1642445199706,
+      "contentHash": "5c2e96464b71485bb3a2be02d8ee3b6f",
+      "sourceName": "contracts/PoolTokens.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "./AssetManagers.sol",
+        "./PoolRegistry.sol",
+        "./balances/BalanceAllocation.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "PoolTokens"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\UserBalance.sol": {
+      "lastModificationDate": 1642445199706,
+      "contentHash": "05f95f3a4f82f38d2d50b49b4ae96d64",
+      "sourceName": "contracts/UserBalance.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeCast.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "./AssetTransfersHandler.sol",
+        "./VaultAuthorization.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "UserBalance"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\ProtocolFeesCollector.sol": {
+      "lastModificationDate": 1642445199706,
+      "contentHash": "6fc01ac767c0168569645e11b7898124",
+      "sourceName": "contracts/ProtocolFeesCollector.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "./interfaces/IProtocolFeesCollector.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ProtocolFeesCollector"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\VaultAuthorization.sol": {
+      "lastModificationDate": 1642445199707,
+      "contentHash": "3d9c428adf072c39f12580d8851348fd",
+      "sourceName": "contracts/VaultAuthorization.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/SignaturesValidator.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "./interfaces/IVault.sol",
+        "./interfaces/IAuthorizer.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "VaultAuthorization"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\Authentication.sol": {
+      "lastModificationDate": 1642445199666,
+      "contentHash": "afc6674b750c2a2bce9e9a1e1d47b7aa",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BalancerErrors.sol",
+        "./IAuthentication.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Authentication"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\IAuthentication.sol": {
+      "lastModificationDate": 1642445199669,
+      "contentHash": "6bf425ca65051509b82564fa5cd3f414",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/IAuthentication.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IAuthentication"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\TemporarilyPausable.sol": {
+      "lastModificationDate": 1642445199671,
+      "contentHash": "4d3cbd4413f3d3fabc921584b1618dbe",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BalancerErrors.sol",
+        "./ITemporarilyPausable.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "TemporarilyPausable"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\solidity-utils\\contracts\\helpers\\SignaturesValidator.sol": {
+      "lastModificationDate": 1642445199671,
+      "contentHash": "f948e1faa3443d183ae302b872e9d067",
+      "sourceName": "@balancer-labs/v2-solidity-utils/contracts/helpers/SignaturesValidator.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BalancerErrors.sol",
+        "./ISignaturesValidator.sol",
+        "../openzeppelin/EIP712.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "SignaturesValidator"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\AssetManagers.sol": {
+      "lastModificationDate": 1642445199703,
+      "contentHash": "78451b415587b15809817ad2ea9c1fa7",
+      "sourceName": "contracts/AssetManagers.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "./UserBalance.sol",
+        "./balances/BalanceAllocation.sol",
+        "./balances/GeneralPoolsBalance.sol",
+        "./balances/MinimalSwapInfoPoolsBalance.sol",
+        "./balances/TwoTokenPoolsBalance.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "AssetManagers"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\PoolRegistry.sol": {
+      "lastModificationDate": 1642445199705,
+      "contentHash": "277c6dcfe8ff4063e5e071c6ea1ac842",
+      "sourceName": "contracts/PoolRegistry.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "./VaultAuthorization.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "PoolRegistry"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\balances\\GeneralPoolsBalance.sol": {
+      "lastModificationDate": 1642445199708,
+      "contentHash": "e8802d00df5a0c0da17e2e17804ddabb",
+      "sourceName": "contracts/balances/GeneralPoolsBalance.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EnumerableMap.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "./BalanceAllocation.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "GeneralPoolsBalance"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\balances\\MinimalSwapInfoPoolsBalance.sol": {
+      "lastModificationDate": 1642445199708,
+      "contentHash": "681774d59ce9b1268f41a4250ebf569e",
+      "sourceName": "contracts/balances/MinimalSwapInfoPoolsBalance.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/EnumerableSet.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "./BalanceAllocation.sol",
+        "../PoolRegistry.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "MinimalSwapInfoPoolsBalance"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\balances\\TwoTokenPoolsBalance.sol": {
+      "lastModificationDate": 1642445199708,
+      "contentHash": "02f2923d08a4f96aa5884abca9235196",
+      "sourceName": "contracts/balances/TwoTokenPoolsBalance.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "./BalanceAllocation.sol",
+        "../PoolRegistry.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "TwoTokenPoolsBalance"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\FlashLoans.sol": {
+      "lastModificationDate": 1642445199704,
+      "contentHash": "c0d6ad66c0d3fb9ded1dc0585626e8a8",
+      "sourceName": "contracts/FlashLoans.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/BalancerErrors.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ReentrancyGuard.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/SafeERC20.sol",
+        "./Fees.sol",
+        "./interfaces/IFlashLoanRecipient.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "FlashLoans"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\test\\MockInternalBalanceRelayer.sol": {
+      "lastModificationDate": 1642445199714,
+      "contentHash": "ee77e485c6cf5b1c56691346f7f8870d",
+      "sourceName": "contracts/test/MockInternalBalanceRelayer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/IERC20.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol",
+        "../interfaces/IVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "MockInternalBalanceRelayer"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\Authorizer.sol": {
+      "lastModificationDate": 1642445199704,
+      "contentHash": "d69ef4174a7ffb46bc2d5867528f727a",
+      "sourceName": "contracts/Authorizer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IAuthorizer.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/AccessControl.sol",
+        "@balancer-labs/v2-solidity-utils/contracts/helpers/InputHelpers.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Authorizer"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\test\\BalanceAllocationMock.sol": {
+      "lastModificationDate": 1642445199713,
+      "contentHash": "3e320986728321a1edb234d459d450de",
+      "sourceName": "contracts/test/BalanceAllocationMock.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../balances/BalanceAllocation.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "BalanceAllocationMock"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\test\\EthForceSender.sol": {
+      "lastModificationDate": 1642445199713,
+      "contentHash": "57082b947db99e29c20876bdca53f11f",
+      "sourceName": "contracts/test/EthForceSender.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "EthForceSender"
+      ]
+    },
+    "D:\\Cent\\Symmetric.CoreContracts-v2\\pkg\\vault\\contracts\\Vault.sol": {
+      "lastModificationDate": 1642445199707,
+      "contentHash": "13d49082df58fe2746e5a0232e89faeb",
+      "sourceName": "contracts/Vault.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1500
+          },
+          "evmVersion": "istanbul",
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.methodIdentifiers",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@balancer-labs/v2-solidity-utils/contracts/misc/IWETH.sol",
+        "./interfaces/IAuthorizer.sol",
+        "./VaultAuthorization.sol",
+        "./FlashLoans.sol",
+        "./Swaps.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Vault"
+      ]
+    }
+  }
+}
